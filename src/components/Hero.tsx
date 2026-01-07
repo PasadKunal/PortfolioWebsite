@@ -80,7 +80,7 @@ const Hero = () => {
               transition={{ delay: 0.5 }}
             >
               Computer Science graduate student at Rutgers University with a passion for machine learning, 
-              data analysis, and building scalable systems that solve real-world problems.
+              data analysis and building scalable systems that solve real-world problems.
             </motion.p>
             
             <motion.div 

@@ -13,12 +13,12 @@ const projects = [
     gradient: 'from-purple-500/20 to-pink-500/20',
   },
   {
-    title: 'MarketInsight-AI',
-    description: 'AI-based market analysis system for trend detection and actionable insights using advanced machine learning models.',
-    tech: ['Python', 'Machine Learning', 'Data Analysis'],
-    github: 'https://github.com/PasadKunal/MarketInsight-AI',
-    demo: 'https://github.com/PasadKunal/MarketInsight-AI',
-    gradient: 'from-blue-500/20 to-cyan-500/20',
+    title: 'Optimizing Chess Search Algorithms',
+    description: 'Built a high-performance chess engine using alpha-beta pruning enhanced with A* search, aspiration windows, and zero-window search to improve depth and efficiency.',
+    tech: ['Python', 'Alpha-Beta Pruning', 'A* Search', 'Heuristics', 'Game Theory'],
+    github: 'https://github.com/PasadKunal/chess-search-optimization',
+    demo: 'https://github.com/PasadKunal/chess-search-optimization',
+    gradient: 'from-indigo-500/20 to-violet-500/20',
   },
   {
     title: 'Mutual Fund Analysis',
@@ -35,6 +35,14 @@ const projects = [
     github: 'https://github.com/PasadKunal/DeepfakeGuard',
     demo: 'https://github.com/PasadKunal/DeepfakeGuard',
     gradient: 'from-red-500/20 to-orange-500/20',
+  },
+  {
+    title: 'MarketInsight-AI',
+    description: 'AI-based market analysis system for trend detection and actionable insights using advanced machine learning models.',
+    tech: ['Python', 'Machine Learning', 'Data Analysis'],
+    github: 'https://github.com/PasadKunal/MarketInsight-AI',
+    demo: 'https://github.com/PasadKunal/MarketInsight-AI',
+    gradient: 'from-blue-500/20 to-cyan-500/20',
   },
   {
     title: 'DeliciousBytes',

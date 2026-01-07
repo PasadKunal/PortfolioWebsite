@@ -1,4 +1,4 @@
-import { Code, Smartphone, Server, GraduationCap, Building } from 'lucide-react';
+import { Code, Smartphone, Server, GraduationCap, Building, Database } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
@@ -18,6 +18,13 @@ const services = [
     title: 'ML Solutions',
     description: 'Intelligent data systems',
   },
+  {
+    icon: Database,
+    title: 'Data Analytics',
+    description: 'Insights from structured and unstructured data',
+  }
+
+
 ];
 
 const education = [
@@ -42,7 +49,7 @@ const About = () => {
     <section id="about" className="py-20 md:py-32 relative overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 mesh-gradient opacity-50" />
-      
+
       <div className="section-container relative z-10" ref={ref}>
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left Column - Services */}
@@ -61,7 +68,7 @@ const About = () => {
                   transition={{ delay: index * 0.15, duration: 0.6 }}
                   whileHover={{ x: 8 }}
                 >
-                  <motion.div 
+                  <motion.div
                     className="flex-shrink-0 w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300"
                     whileHover={{ rotate: 5, scale: 1.1 }}
                   >
@@ -71,7 +78,7 @@ const About = () => {
                     <h3 className="font-semibold text-foreground text-lg">{service.title}</h3>
                     <p className="text-sm text-muted-foreground">{service.description}</p>
                   </div>
-                  <motion.div 
+                  <motion.div
                     className="w-1.5 h-10 bg-gradient-to-b from-primary to-primary/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
                     layoutId={`indicator-${service.title}`}
                   />
@@ -90,16 +97,16 @@ const About = () => {
               About <span className="text-gradient">Me</span>
             </h2>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              I'm a Computer Science graduate student at Rutgers University with a strong interest in 
-              machine learning, data analysis, and scalable systems. I'm passionate about learning by 
+              I am a Computer Science graduate student at Rutgers University with a strong interest in
+              machine learning, data analysis and scalable systems. I am passionate about learning by
               doing and building impactful, real-world solutions that make a difference.
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 mb-12">
               {[
-                { value: '5', label: 'Completed Projects' },
-                { value: '8', label: 'Months Experience' },
+                { value: '6', label: 'Completed Projects' },
+                { value: '12', label: 'Months Experience' },
                 { value: '15', label: 'Technologies' },
               ].map((stat, index) => (
                 <motion.div
@@ -123,15 +130,15 @@ const About = () => {
             <h3 className="font-display font-semibold text-xl text-foreground mb-4">Education</h3>
             <div className="space-y-4">
               {education.map((edu, index) => (
-                <motion.div 
-                  key={edu.degree} 
+                <motion.div
+                  key={edu.degree}
                   className="flex gap-4 p-5 rounded-xl glass-card hover-lift group"
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ delay: 0.6 + index * 0.15 }}
                   whileHover={{ x: 8 }}
                 >
-                  <motion.div 
+                  <motion.div
                     className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors"
                     whileHover={{ rotate: -5 }}
                   >

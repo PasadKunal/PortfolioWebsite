@@ -1,26 +1,70 @@
 import { Briefcase, Calendar, CheckCircle } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef, useLayoutEffect, useState } from 'react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const Experience = () => {
   const { ref, isInView } = useScrollAnimation({ threshold: 0.2 });
 
-  const responsibilities = [
-    'Worked on production-level web applications alongside experienced engineers',
-    'Improved backend logic, database queries, and API performance',
-    'Built reusable UI components and integrated third-party services (authentication, payments)',
-    'Collaborated directly with a client to successfully launch a CodeIgniter-based website',
-    'Gained end-to-end development experience in a professional team environment',
+    // For scroll-linked moving dot
+  const sectionRef = useRef(null);   // tracks scroll progress of the whole section
+  const lineRef = useRef(null);      // used to measure the timeline height
+  const [lineHeight, setLineHeight] = useState(0);
+
+  // Track scroll progress across the section (0 -> 1)
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start start', 'end end'], 
+  });
+
+  // Measure how far the dot should travel (height of the timeline content)
+  useLayoutEffect(() => {
+    if (!lineRef.current) return;
+
+    const el = lineRef.current;
+
+const measure = () => {
+  const rect = el.getBoundingClientRect();
+  setLineHeight(rect.height);
+};
+
+    measure();
+
+    // re-measure on resize (responsive)
+    window.addEventListener('resize', measure);
+    return () => window.removeEventListener('resize', measure);
+  }, []);
+
+  // Convert scroll progress (0..1) into y movement (0..lineHeight)
+  const DOT_SIZE = 16; // w-4 h-4
+  const dotY = useTransform(scrollYProgress, [0, 1], [0, Math.max(0, lineHeight - DOT_SIZE)]);
+
+  const eterniqResponsibilities = [
+    'Worked on an AI-powered conversational and coding-assistant platform delivering structured and optimized solutions',
+    'Engineered backend services and ML-driven inference pipelines supporting AI workflows and response orchestration',
+    'Applied prompt engineering and structured reasoning techniques to improve accuracy, consistency, and reliability',
+    'Integrated and deployed inference services via REST APIs for real-time usage',
+    'Evaluated AI outputs using qualitative analysis and automated metrics to reduce hallucinations',
+    'Collaborated with engineers and designers to debug issues, optimize performance, and ship production-ready features',
+  ];
+
+  const mukesoftResponsibilities = [
+    'Developed and maintained production-grade web applications using Laravel and CodeIgniter in a multi-client environment',
+    'Designed and implemented RESTful APIs and backend business logic supporting authentication, CRUD operations and role-based access control',
+    'Optimized SQL queries and database schemas to improve response times, reliability and scalability',
+    'Built reusable frontend components and enhanced form validation, error handling and overall user experience',
+    'Debugged, tested and deployed production systems in collaboration with cross-functional engineering teams',
+    'Worked directly with a client to troubleshoot issues and successfully launch a CodeIgniter-based website',
   ];
 
   return (
-    <section className="py-20 md:py-32 relative overflow-hidden">
+    <section ref={sectionRef} className="py-20 md:py-32 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-secondary/20" />
       <div className="absolute inset-0 mesh-gradient opacity-30" />
-      
+
       <div className="section-container relative z-10" ref={ref}>
-        <motion.div 
+        <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -32,33 +76,79 @@ const Experience = () => {
           </p>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <div className="relative pl-8 border-l-2 border-primary/30">
+          <div ref={lineRef} className="relative pl-8 border-l-2 border-primary/30">
             {/* Animated timeline dot */}
-            <motion.div 
+            <motion.div
               className="absolute left-0 top-0 w-4 h-4 -translate-x-[9px] rounded-full bg-primary"
+              style={{ y: dotY }}
               initial={{ scale: 0 }}
               animate={isInView ? { scale: 1 } : {}}
               transition={{ delay: 0.4, type: "spring", stiffness: 200 }}
             >
-              <motion.div 
+              <motion.div
                 className="absolute inset-0 rounded-full bg-primary"
                 animate={{ scale: [1, 1.5, 1], opacity: [1, 0, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
               />
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
+              className="glass-card rounded-xl p-6 md:p-8 hover-lift mb-12"
+              whileHover={{ x: 8 }}
+            >
+              <div className="flex flex-wrap items-center gap-4 mb-4">
+                <motion.div
+                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <Briefcase className="w-5 h-5 text-primary" />
+                  <span className="font-semibold text-primary">Software Engineer Intern</span>
+                </motion.div>
+                <span className="text-muted-foreground">•</span>
+                <span className="text-foreground font-medium">EternIQ</span>
+              </div>
+
+              <div className="flex items-center gap-2 text-sm text-muted-foreground mb-6 glass-card w-fit px-3 py-1.5 rounded-full">
+                <Calendar className="w-4 h-4" />
+                <span>January 2025 – May 2025</span>
+              </div>
+
+              <ul className="space-y-3">
+                {eterniqResponsibilities.map((item, index) => (
+                  <motion.li
+                    key={index}
+                    className="flex gap-3 group"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={isInView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ delay: 0.5 + index * 0.1 }}
+                  >
+                    <motion.div
+                      whileHover={{ scale: 1.2, rotate: 10 }}
+                      className="flex-shrink-0 mt-0.5"
+                    >
+                      <CheckCircle className="w-5 h-5 text-primary" />
+                    </motion.div>
+                    <span className="text-muted-foreground group-hover:text-foreground transition-colors">
+                      {item}
+                    </span>
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
+
+
+            <motion.div
               className="glass-card rounded-xl p-6 md:p-8 hover-lift"
               whileHover={{ x: 8 }}
             >
               <div className="flex flex-wrap items-center gap-4 mb-4">
-                <motion.div 
+                <motion.div
                   className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10"
                   whileHover={{ scale: 1.05 }}
                 >
@@ -68,15 +158,15 @@ const Experience = () => {
                 <span className="text-muted-foreground">•</span>
                 <span className="text-foreground font-medium">Mukesoft IT Consultants</span>
               </div>
-              
+
               <div className="flex items-center gap-2 text-sm text-muted-foreground mb-6 glass-card w-fit px-3 py-1.5 rounded-full">
                 <Calendar className="w-4 h-4" />
                 <span>July 2023 – February 2024</span>
               </div>
-              
+
               <ul className="space-y-3">
-                {responsibilities.map((item, index) => (
-                  <motion.li 
+                {mukesoftResponsibilities.map((item, index) => (
+                  <motion.li
                     key={index}
                     className="flex gap-3 group"
                     initial={{ opacity: 0, x: -20 }}
