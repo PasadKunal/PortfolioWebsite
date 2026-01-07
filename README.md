@@ -1,73 +1,79 @@
-# Welcome to your Lovable project
+# Kunal Pasad — Personal Portfolio
 
-## Project info
+A modern, responsive personal portfolio built with Vite, React, and TypeScript. It showcases projects, experience, skills, and contact information using a library of reusable UI components and small, tasteful animations.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Live demo
+- https://kunalpasad.vercel.app
 
-## How can I edit this code?
+Key features
+- Sectioned single‑page site: Home, About, Experience, Projects, Services, Skills, Contact
+- Responsive and accessible components
+- Reusable UI primitives under `src/components/ui`
+- Lightweight scroll/entry animations via custom hooks in `src/hooks`
+- Tailwind CSS for fast, consistent styling
 
-There are several ways of editing your application.
+Tech stack
+- Vite (dev server + build)
+- React + TypeScript
+- Tailwind CSS + PostCSS
+- Optional runtimes: npm, pnpm, or Bun
 
-**Use Lovable**
+Quick Start
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Prerequisites
+- Node.js 18+ or Bun
 
-Changes made via Lovable will be committed automatically to this repo.
+Install (npm)
+```bash
+npm install
+```
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+Run development server
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Build for production and preview
+```bash
+npm run build
+npm run preview
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+If you prefer Bun
+```bash
+bun install
+bun run dev
+```
 
-**Use GitHub Codespaces**
+Project structure (high level)
+- `src/` — application source
+	- `src/components/` — page sections and shared components (About, Contact, Hero, Projects, etc.)
+	- `src/components/ui/` — UI primitives and controls
+	- `src/pages/` — route pages (`Index.tsx`, `NotFound.tsx`)
+	- `src/hooks/` — custom hooks (`useScrollAnimation`, `use-mobile`, etc.)
+	- `src/assets/` — images and static assets
+- `public/` — static files served as-is
+- `tailwind.config.ts`, `postcss.config.js`, `vite.config.ts` — build and styling config
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Deployment
+- Recommended: Vercel or Netlify for zero-config deployments (connect your repo and point to the default build command `npm run build`).
+- GitHub Pages: build to `dist/` and deploy with a GitHub Action or `gh-pages` if desired.
 
-## What technologies are used for this project?
+Customizing the site
+- Update content and layout in `src/pages/Index.tsx` and the components in `src/components/`.
+- Replace or add assets in `public/` and `src/assets/`.
+- Modify Tailwind tokens in `tailwind.config.ts` and styles in `src/index.css`.
 
-This project is built with:
+Adding projects
+- Add project data (you may keep a JSON, TS file, or add directly to the components) and update the `Projects` component in `src/components/Projects.tsx`.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Development tips
+- Use your browser devtools and Vite's fast refresh for quick iteration.
+- Keep UI primitives in `src/components/ui/` to encourage reuse.
 
-## How can I deploy this project?
+Contributing
+- This repo is maintained as a personal portfolio.
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Contact
+- Author: Kunal Pasad
+- GitHub: https://github.com/PasadKunal
