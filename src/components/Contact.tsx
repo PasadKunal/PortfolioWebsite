@@ -107,7 +107,7 @@ const Contact = () => {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.2 }}
             >
-              Have a project?
+              Interested in AI systems,
             </motion.h2>
             <motion.h2 
               className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-8"
@@ -115,7 +115,7 @@ const Contact = () => {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.3 }}
             >
-              <span className="text-gradient">Let's talk!</span>
+              <span className="text-gradient">data, or scalable systems work?</span>
             </motion.h2>
 
             <motion.div 
@@ -153,6 +153,18 @@ const Contact = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.7 }}
+              className="mb-6"
+            >
+              <p className="text-muted-foreground leading-relaxed">
+                I am happy to connect about internships, full-time roles, research collaborations, or
+                projects related to machine learning, LLM evaluation, data pipelines, and scalable systems.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.8 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -225,7 +237,7 @@ const Contact = () => {
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   rows={4}
                   className="w-full px-4 py-3 glass-card rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all resize-none"
-                  placeholder="Tell me about your project..."
+                  placeholder="Tell me about the role, team, or problem you are working on..."
                   required
                 />
               </motion.div>

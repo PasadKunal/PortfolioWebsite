@@ -6,50 +6,44 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 const projects = [
   {
     title: 'MindSync',
-    description: 'AI-powered mental wellness platform generating personalized insights using intelligent workflows and natural language processing.',
-    tech: ['React', 'Node.js', 'AI/ML', 'APIs'],
+    description: 'RAG-based knowledge assistant with retrieval, vector search, caching, and FastAPI services for grounded responses over unstructured documents.',
+    tech: ['FastAPI', 'RAG', 'AWS', 'Vector Search'],
     github: 'https://github.com/PasadKunal/MindSync',
-    demo: 'https://github.com/PasadKunal/MindSync',
     gradient: 'from-purple-500/20 to-pink-500/20',
   },
   {
-    title: 'Optimizing Chess Search Algorithms',
-    description: 'Built a high-performance chess engine using alpha-beta pruning enhanced with A* search, aspiration windows, and zero-window search to improve depth and efficiency.',
-    tech: ['Python', 'Alpha-Beta Pruning', 'A* Search', 'Heuristics', 'Game Theory'],
-    github: 'https://github.com/PasadKunal/chess-search-optimization',
-    demo: 'https://github.com/PasadKunal/chess-search-optimization',
+    title: 'InstantStory',
+    description: 'Multimodal LLM story generation system built with Mistral-7B, QLoRA fine-tuning, and optimized inference pipelines for stronger coherence and lower latency.',
+    tech: ['Python', 'QLoRA', 'LLMs', 'FastAPI'],
+    github: 'https://github.com/PasadKunal',
     gradient: 'from-indigo-500/20 to-violet-500/20',
   },
   {
-    title: 'Mutual Fund Analysis',
-    description: 'Data-driven tool to evaluate mutual funds using performance metrics, risk analysis, and visualization dashboards.',
-    tech: ['Python', 'Pandas', 'Data Visualization'],
+    title: 'Mutual Fund Data Pipeline & Portfolio Analysis',
+    description: 'ETL and analytics workflow for financial time-series data, including cleaning, normalization, and portfolio metrics such as returns, volatility, and drawdowns.',
+    tech: ['Python', 'Pandas', 'SQL', 'ETL'],
     github: 'https://github.com/PasadKunal/mutual-fund-analysis',
-    demo: 'https://github.com/PasadKunal/mutual-fund-analysis',
     gradient: 'from-green-500/20 to-emerald-500/20',
   },
   {
     title: 'Deepfake Guard',
-    description: 'Audio deepfake detection system using ML models with explainable AI techniques for transparency and trust.',
-    tech: ['Python', 'CNNs', 'MFCC', 'XAI'],
+    description: 'Audio deepfake detection pipeline using CNNs, MFCC-based features, and explainability methods like SHAP and Grad-CAM for interpretable predictions.',
+    tech: ['PyTorch', 'CNNs', 'MFCC', 'Explainable AI'],
     github: 'https://github.com/PasadKunal/DeepfakeGuard',
-    demo: 'https://github.com/PasadKunal/DeepfakeGuard',
     gradient: 'from-red-500/20 to-orange-500/20',
   },
   {
-    title: 'MarketInsight-AI',
-    description: 'AI-based market analysis system for trend detection and actionable insights using advanced machine learning models.',
-    tech: ['Python', 'Machine Learning', 'Data Analysis'],
-    github: 'https://github.com/PasadKunal/MarketInsight-AI',
-    demo: 'https://github.com/PasadKunal/MarketInsight-AI',
+    title: 'Sales Forecasting & Revenue Prediction System',
+    description: 'Time-series forecasting workflow using temporal features, baseline comparisons, and dashboards to improve revenue prediction accuracy and business visibility.',
+    tech: ['Python', 'Pandas', 'scikit-learn', 'Tableau'],
+    github: 'https://github.com/PasadKunal',
     gradient: 'from-blue-500/20 to-cyan-500/20',
   },
   {
     title: 'DeliciousBytes',
-    description: 'Full-stack food delivery application with real-time tracking, order management, and comprehensive admin dashboard.',
-    tech: ['Flutter', 'Laravel', 'MySQL'],
+    description: 'Scalable system with relational data models, REST APIs, and containerized deployment using Docker and Kubernetes.',
+    tech: ['Laravel', 'SQL', 'Docker', 'Kubernetes'],
     github: 'https://github.com/PasadKunal/DeliciousBytes',
-    demo: 'https://github.com/PasadKunal/DeliciousBytes',
     gradient: 'from-yellow-500/20 to-amber-500/20',
   },
 ];
@@ -71,6 +65,9 @@ const Projects = () => {
           <h2 className="section-title">
             Featured <span className="text-gradient">Projects</span>
           </h2>
+          <p className="section-subtitle mx-auto">
+            Selected work drawn directly from my current AI, data, and software engineering resumes
+          </p>
           <motion.div 
             className="flex justify-center mt-4"
             initial={{ scaleY: 0 }}
@@ -126,24 +123,18 @@ const Projects = () => {
                   {project.description}
                 </p>
                 
-                <div className="flex gap-3 relative z-10">
-                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <Button variant="default" size="sm" asChild className="btn-shine">
-                      <a href={project.github} className="gap-2">
-                        <Github className="w-4 h-4" />
-                        View Github
-                      </a>
-                    </Button>
-                  </motion.div>
-                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <Button variant="ghost" size="sm" asChild className="glass-card">
-                      <a href={project.demo} className="gap-2 text-muted-foreground hover:text-foreground">
-                        View project
-                        <ExternalLink className="w-4 h-4" />
-                      </a>
-                    </Button>
-                  </motion.div>
-                </div>
+                {project.github && (
+                  <div className="flex gap-3 relative z-10">
+                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                      <Button variant="default" size="sm" asChild className="btn-shine">
+                        <a href={project.github} className="gap-2">
+                          <Github className="w-4 h-4" />
+                          View Github
+                        </a>
+                      </Button>
+                    </motion.div>
+                  </div>
+                )}
               </motion.div>
             </motion.div>
           ))}

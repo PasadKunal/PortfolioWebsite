@@ -23,8 +23,11 @@ const Header = ({ isDark, toggleTheme }: HeaderProps) => {
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
+    { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
-    { name: 'Services', href: '#services' },
+    { name: 'Publications', href: '#publications' },
+    { name: 'Skills', href: '#skills' },
+    { name: 'Areas of Interest', href: '#services' },
     { name: 'Contact', href: '#contact' },
   ];
 

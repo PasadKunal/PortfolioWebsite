@@ -1,27 +1,27 @@
-import { Code, Smartphone, Server, GraduationCap, Building, Database } from 'lucide-react';
+import { BrainCircuit, Database, GraduationCap, Building, Server, Workflow } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const services = [
   {
-    icon: Code,
-    title: 'Web Development',
-    description: 'Building scalable web apps',
+    icon: BrainCircuit,
+    title: 'LLM Systems',
+    description: 'RAG pipelines, prompt engineering, evaluation, and multimodal workflows',
   },
   {
-    icon: Smartphone,
-    title: 'App Development',
-    description: 'Cross-platform mobile solutions',
+    icon: Workflow,
+    title: 'Data Pipelines',
+    description: 'ETL, validation, normalization, and high-volume processing workflows',
   },
   {
     icon: Server,
-    title: 'ML Solutions',
-    description: 'Intelligent data systems',
+    title: 'Scalable Systems',
+    description: 'FastAPI, Laravel, REST APIs, and production-ready service design',
   },
   {
     icon: Database,
-    title: 'Data Analytics',
-    description: 'Insights from structured and unstructured data',
+    title: 'Analytics & Evaluation',
+    description: 'Model evaluation, forecasting, dashboards, and decision-ready metrics',
   }
 
 
@@ -97,17 +97,18 @@ const About = () => {
               About <span className="text-gradient">Me</span>
             </h2>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              I am a Computer Science graduate student at Rutgers University with a strong interest in
-              machine learning, data analysis and scalable systems. I am passionate about learning by
-              doing and building impactful, real-world solutions that make a difference.
+              I am a Computer Science graduate student at Rutgers University focused on machine learning,
+              LLM applications, data engineering, and scalable systems. My resumes consistently center
+              on building reliable systems, from inference and evaluation pipelines to analytics workflows
+              and production APIs.
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 mb-12">
               {[
-                { value: '6', label: 'Completed Projects' },
-                { value: '12', label: 'Months Experience' },
-                { value: '15', label: 'Technologies' },
+                { value: '100', label: 'K+ Records Processed' },
+                { value: '33', label: 'K+ Multilingual Benchmark Questions' },
+                { value: '1', label: 'K+ Outputs Evaluated' },
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}

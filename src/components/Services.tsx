@@ -4,21 +4,21 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const services = [
   {
-    icon: Globe,
-    title: 'Full-Stack Web Development',
-    description: 'Building scalable, responsive web applications with clean architecture and performance focus. From frontend interfaces to backend APIs.',
+    icon: Brain,
+    title: 'LLM Applications & Evaluation',
+    description: 'Building retrieval-augmented and inference workflows with prompt engineering, evaluation frameworks, and latency-focused optimization.',
     gradient: 'from-blue-500 to-cyan-500',
   },
   {
-    icon: Brain,
-    title: 'Machine Learning Solutions',
-    description: 'Developing and deploying ML models for prediction, classification, and intelligent automation that drive business value.',
+    icon: Globe,
+    title: 'Backend & Platform Engineering',
+    description: 'Designing FastAPI and Laravel services, data ingestion layers, and deployment-ready scalable systems for production applications.',
     gradient: 'from-purple-500 to-pink-500',
   },
   {
     icon: BarChart3,
-    title: 'Data Analysis & Visualization',
-    description: 'Transforming raw data into meaningful insights through clear, impactful visualizations and comprehensive dashboards.',
+    title: 'Data Pipelines & Analytics',
+    description: 'Building ETL, validation, forecasting, and analytics workflows that turn large datasets into reliable model inputs and decision-ready insights.',
     gradient: 'from-green-500 to-emerald-500',
   },
 ];
@@ -39,13 +39,13 @@ const Services = () => {
         >
           <div className="flex items-center justify-center gap-2 mb-4">
             <Sparkles className="w-5 h-5 text-primary" />
-            <span className="text-primary font-medium">What I Offer</span>
+            <span className="text-primary font-medium">What I Work On</span>
           </div>
           <h2 className="section-title">
-            My <span className="text-gradient">Services</span>
+            <span className="text-gradient">Areas of Interest</span>
           </h2>
           <p className="section-subtitle mx-auto">
-            What I can help you build
+            The technical themes that show up consistently across my resumes and projects
           </p>
         </motion.div>
 

@@ -4,32 +4,32 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 const skillCategories = [
   {
     title: 'Programming Languages',
-    skills: ['C++', 'Python', 'JavaScript', 'TypeScript', 'SQL', 'Dart', 'PHP'],
+    skills: ['Python', 'SQL', 'Java', 'JavaScript', 'C++', 'R', 'PHP'],
     gradient: 'from-violet-500/20 to-purple-500/20',
   },
   {
-    title: 'Web & App Development',
-    skills: ['React', 'Node.js', 'Flutter', 'Laravel', 'CodeIgniter', 'Tailwind CSS'],
+    title: 'Backend & APIs',
+    skills: ['FastAPI', 'Node.js', 'Laravel', 'CodeIgniter', 'REST APIs', 'Microservices'],
     gradient: 'from-blue-500/20 to-cyan-500/20',
   },
   {
     title: 'Machine Learning & AI',
-    skills: ['PyTorch', 'TensorFlow', 'scikit-learn', 'XGBoost', 'CNNs', 'LSTMs'],
+    skills: ['PyTorch', 'scikit-learn', 'XGBoost', 'CNNs', 'HuggingFace', 'QLoRA'],
     gradient: 'from-green-500/20 to-emerald-500/20',
   },
   {
     title: 'LLMs & AI APIs',
-    skills: ['Gemini API', 'OpenAI APIs', 'Prompt Engineering', 'Chain-of-Thought'],
+    skills: ['LLMs', 'RAG', 'Prompt Engineering', 'Embeddings', 'Vector Search', 'LLM Evaluation'],
     gradient: 'from-pink-500/20 to-rose-500/20',
   },
   {
-    title: 'Databases',
-    skills: ['MySQL', 'PostgreSQL', 'MongoDB', 'Firebase'],
+    title: 'Data Systems',
+    skills: ['PostgreSQL', 'MySQL', 'MongoDB', 'FAISS', 'Apache Kafka', 'PySpark'],
     gradient: 'from-orange-500/20 to-amber-500/20',
   },
   {
-    title: 'Data Analysis',
-    skills: ['Tableau', 'Power BI', 'Matplotlib', 'Seaborn', 'Pandas'],
+    title: 'Analytics & Deployment',
+    skills: ['Pandas', 'NumPy', 'Tableau', 'Docker', 'Kubernetes', 'AWS'],
     gradient: 'from-teal-500/20 to-cyan-500/20',
   },
 ];
@@ -38,7 +38,7 @@ const Skills = () => {
   const { ref, isInView } = useScrollAnimation({ threshold: 0.1 });
 
   return (
-    <section className="py-20 md:py-32 relative overflow-hidden">
+    <section id="skills" className="py-20 md:py-32 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-secondary/20" />
       <div className="absolute inset-0 mesh-gradient opacity-30" />
@@ -54,7 +54,7 @@ const Skills = () => {
             Skills & <span className="text-gradient">Expertise</span>
           </h2>
           <p className="section-subtitle mx-auto">
-            Technologies and tools I work with
+            Tools and concepts that appear across my current resumes
           </p>
         </motion.div>
 

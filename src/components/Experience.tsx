@@ -58,7 +58,7 @@ const measure = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-20 md:py-32 relative overflow-hidden">
+    <section id="experience" ref={sectionRef} className="py-20 md:py-32 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-secondary/20" />
       <div className="absolute inset-0 mesh-gradient opacity-30" />
@@ -72,7 +72,7 @@ const measure = () => {
         >
           <h2 className="section-title">Experience</h2>
           <p className="section-subtitle mx-auto">
-            My professional journey in software development
+            Resume-backed experience across AI systems, data pipelines, and scalable engineering
           </p>
         </motion.div>
 
@@ -108,7 +108,7 @@ const measure = () => {
                   whileHover={{ scale: 1.05 }}
                 >
                   <Briefcase className="w-5 h-5 text-primary" />
-                  <span className="font-semibold text-primary">Software Engineer Intern</span>
+                  <span className="font-semibold text-primary">AI / ML Intern</span>
                 </motion.div>
                 <span className="text-muted-foreground">•</span>
                 <span className="text-foreground font-medium">EternIQ</span>
@@ -153,7 +153,7 @@ const measure = () => {
                   whileHover={{ scale: 1.05 }}
                 >
                   <Briefcase className="w-5 h-5 text-primary" />
-                  <span className="font-semibold text-primary">Full Stack Web Developer</span>
+                  <span className="font-semibold text-primary">Full Stack Web Developer Intern</span>
                 </motion.div>
                 <span className="text-muted-foreground">•</span>
                 <span className="text-foreground font-medium">Mukesoft IT Consultants</span>

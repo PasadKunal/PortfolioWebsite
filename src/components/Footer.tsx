@@ -23,14 +23,14 @@ const Footer = () => {
           </motion.p>
           
           <p className="text-sm text-muted-foreground text-center flex items-center gap-2">
-            Designed & built with 
+            Built around AI, data, and scalable systems experience
             <motion.span
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 1, repeat: Infinity }}
             >
               <Heart className="w-4 h-4 text-primary fill-primary" />
             </motion.span>
-            All rights reserved © {new Date().getFullYear()}
+            © {new Date().getFullYear()}
           </p>
           
           <div className="flex items-center gap-4">
