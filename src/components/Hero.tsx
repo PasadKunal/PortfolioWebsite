@@ -9,7 +9,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import profilePhoto from '@/assets/profile-photo.jpeg';
+import profilePhoto from '@/assets/profile-photo.png';
 
 const resumeLinks = [
   { label: 'Software Engineer', href: '/Kunal_Pasad_Resume_Software_Engineer.pdf' },
@@ -187,7 +187,7 @@ const Hero = () => {
                   <img 
                     src={profilePhoto} 
                     alt="Kunal Hemant Pasad"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-[center_25%]"
                   />
                   {/* Gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent" />
