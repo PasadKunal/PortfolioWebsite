@@ -1,25 +1,7 @@
-import { ArrowRight, Download, ChevronLeft, ChevronRight, FileText, Sparkles } from 'lucide-react';
+import { ArrowRight, Download, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
 import profilePhoto from '@/assets/profile-photo.png';
-
-const resumeLinks = [
-  { label: 'Software Engineer', href: '/Kunal_Pasad_Resume_Software_Engineer.pdf' },
-  { label: 'AI Engineer', href: '/Kunal_Pasad_Resume_AI_Engineer.pdf' },
-  { label: 'ML Engineer', href: '/Kunal_Pasad_Resume_ML_Engineer.pdf' },
-  { label: 'Data Scientist', href: '/Kunal_Pasad_Resume_Data_Scientist.pdf' },
-  { label: 'Data Engineer', href: '/Kunal_Pasad_Resume_Data_Engineer.pdf' },
-  { label: 'Data Analyst', href: '/Kunal_Pasad_Resume_Data_Analyst.pdf' },
-  // { label: 'Research', href: '/Kunal_Pasad_Resume_Research.pdf' },
-];
 
 const Hero = () => {
   return (
@@ -116,28 +98,14 @@ const Hero = () => {
                   </a>
                 </Button>
               </motion.div>
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <Button variant="heroOutline" className="glass-card">
-                      <Download className="mr-2 h-5 w-5" />
-                      View Resumes
-                    </Button>
-                  </motion.div>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="start" className="w-64">
-                  <DropdownMenuLabel>Select Resume</DropdownMenuLabel>
-                  <DropdownMenuSeparator />
-                  {resumeLinks.map((resume) => (
-                    <DropdownMenuItem key={resume.label} asChild>
-                      <a href={resume.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                        <FileText className="h-4 w-4" />
-                        {resume.label}
-                      </a>
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Button variant="heroOutline" asChild className="glass-card">
+                  <a href="/resume.pdf" download="Kunal_Pasad_Resume.pdf">
+                    <Download className="mr-2 h-5 w-5" />
+                    Download Resume
+                  </a>
+                </Button>
+              </motion.div>
             </motion.div>
           </motion.div>
 

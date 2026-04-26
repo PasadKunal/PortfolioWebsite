@@ -21,7 +21,7 @@ const publications = [
     description:
       'Developed an NLP-driven message prioritization system using embeddings and gradient-boosted models, with preprocessing and feature extraction workflows that achieved 96.55% classification accuracy.',
     tags: ['Machine Learning', 'NLP', 'Embeddings'],
-    link: '/2025.emnlp-main.769.pdf',
+    link: '/IMPULSE__Important_Message_Prioritization_Using_Relevancy_Scoring_Engine.pdf',
     gradient: 'from-fuchsia-500/20 to-rose-500/20',
   },
 ];

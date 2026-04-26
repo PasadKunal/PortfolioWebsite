@@ -106,9 +106,9 @@ const About = () => {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 mb-12">
               {[
-                { value: '100', label: 'K+ Records Processed' },
-                { value: '33', label: 'K+ Multilingual Benchmark Questions' },
-                { value: '1', label: 'K+ Outputs Evaluated' },
+                { value: '100K', label: 'Records Processed' },
+                { value: '33K', label: 'Multilingual Benchmark Questions' },
+                { value: '2', label: 'Internships Completed' },
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}
