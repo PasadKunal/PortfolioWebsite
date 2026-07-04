@@ -5,11 +5,11 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const publications = [
   {
-    title: 'Multilingual Sports Question Answering Benchmark',
-    venue: 'EMNLP 2025',
+    title: 'CultSportQA: A Multilingual QA Benchmark for Traditional Sports',
+    venue: 'EMNLP 2025 (Main Conference)',
     type: 'Conference Publication',
     description:
-      'Co-authored multilingual QA benchmark with 33K+ questions across 11 languages and 60 countries, with multi-hop reasoning tasks designed to evaluate compositional and cross-lingual LLM reasoning.',
+      'Co-authored a multilingual QA benchmark of 33K+ questions across 60 countries and 11 languages, evaluating 17+ LLMs under zero-shot, few-shot, and chain-of-thought prompting to probe cross-lingual and compositional reasoning.',
     tags: ['LLM Evaluation', 'Multilingual NLP', 'Benchmarking'],
     link: '/2025.emnlp-main.769.pdf',
     gradient: 'from-sky-500/20 to-cyan-500/20',
@@ -49,7 +49,7 @@ const Publications = () => {
             Selected <span className="text-gradient">Publications</span>
           </h2>
           <p className="section-subtitle mx-auto">
-            Papers and benchmarks highlighted in my research-focused resume
+            Peer-reviewed papers and benchmarks in NLP and machine learning
           </p>
         </motion.div>
 

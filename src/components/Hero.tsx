@@ -79,9 +79,9 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
             >
-              Computer Science graduate student at Rutgers building LLM applications, evaluation pipelines,
-              data systems, and production services with hands-on experience across AI, analytics, and scalable
-              engineering workflows.
+              Computer Science graduate student at Rutgers building multi-agent LLM applications, evaluation
+              pipelines, streaming data platforms, and production services across AI, analytics, and scalable
+              engineering.
             </motion.p>
             
             <motion.div 
@@ -100,7 +100,7 @@ const Hero = () => {
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Button variant="heroOutline" asChild className="glass-card">
-                  <a href="/resume.pdf" download="Kunal_Pasad_Resume.pdf">
+                  <a href="/Kunal_Pasad_Resume_Software_Engineer.pdf" download="Kunal_Pasad_Resume.pdf">
                     <Download className="mr-2 h-5 w-5" />
                     Download Resume
                   </a>

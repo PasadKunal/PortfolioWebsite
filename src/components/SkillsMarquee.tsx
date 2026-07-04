@@ -1,7 +1,7 @@
 const skills = [
-  'Python', 'SQL', 'FastAPI', 'PyTorch', 'RAG',
-  'LLM Evaluation', 'PostgreSQL', 'MongoDB', 'Docker', 'AWS',
-  'Laravel', 'Kubernetes', 'Apache Kafka', 'PySpark', 'Tableau'
+  'Python', 'TypeScript', 'FastAPI', 'Spring Boot', 'LangGraph',
+  'RAG', 'PyTorch', 'QLoRA', 'PostgreSQL', 'pgvector',
+  'Redis', 'Apache Kafka', 'Apache Flink', 'Docker', 'Kubernetes', 'AWS'
 ];
 
 const SkillsMarquee = () => {

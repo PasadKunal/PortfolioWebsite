@@ -1,4 +1,4 @@
-import { Briefcase, Calendar, CheckCircle } from 'lucide-react';
+import { Briefcase, Calendar, CheckCircle, MapPin } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef, useLayoutEffect, useState } from 'react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
@@ -39,22 +39,23 @@ const measure = () => {
   const DOT_SIZE = 16; // w-4 h-4
   const dotY = useTransform(scrollYProgress, [0, 1], [0, Math.max(0, lineHeight - DOT_SIZE)]);
 
+  const nationalAppraisalResponsibilities = [
+    'Built an end-to-end ML system that predicts real-estate appraisal fees and recommends appraisers from raw bid inputs, replacing a fully manual pricing workflow',
+    'Engineered a data pipeline normalizing 5,000+ historical bids from FileMaker Pro with shared preprocessing that guaranteed exact train/serve parity across all 364 input fields',
+    'Deployed trained models as a Flask REST API integrated into Google Sheets via Apps Script, enabling one-click predictions for the bidding team',
+  ];
+
   const eterniqResponsibilities = [
-    'Worked on an AI-powered conversational and coding-assistant platform delivering structured and optimized solutions',
-    'Engineered backend services and ML-driven inference pipelines supporting AI workflows and response orchestration',
-    'Applied prompt engineering and structured reasoning techniques to improve accuracy, consistency, and reliability',
-    'Integrated and deployed inference services via REST APIs for real-time usage',
-    'Evaluated AI outputs using qualitative analysis and automated metrics to reduce hallucinations',
-    'Collaborated with engineers and designers to debug issues, optimize performance, and ship production-ready features',
+    'Built scalable LLM inference pipelines using chain-of-thought prompting and structured outputs, reducing hallucination rates by ~25% across 1K+ evaluated responses',
+    'Developed a model evaluation framework tracking reasoning accuracy and failure modes, establishing reproducible quality benchmarks with unit testing across deployments',
+    'Built data ingestion and transformation pipelines processing 100K+ records with schema validation, normalization, and REST API integration into production systems',
+    'Collaborated in an agile environment to debug issues, optimize performance, and ship production-ready AI features',
   ];
 
   const mukesoftResponsibilities = [
-    'Developed and maintained production-grade web applications using Laravel and CodeIgniter in a multi-client environment',
-    'Designed and implemented RESTful APIs and backend business logic supporting authentication, CRUD operations and role-based access control',
-    'Optimized SQL queries and database schemas to improve response times, reliability and scalability',
-    'Built reusable frontend components and enhanced form validation, error handling and overall user experience',
-    'Debugged, tested and deployed production systems in collaboration with cross-functional engineering teams',
-    'Worked directly with a client to troubleshoot issues and successfully launch a CodeIgniter-based website',
+    'Built backend REST APIs using Laravel and CodeIgniter, and optimized SQL queries with composite indexing, reducing API response latency by ~30% in production',
+    'Processed 50K+ relational records with schema validation and integrity checks, improving data consistency and reliability across the application',
+    'Built reusable frontend components with improved form validation and error handling, and worked directly with a client to launch a production website',
   ];
 
   return (
@@ -72,7 +73,7 @@ const measure = () => {
         >
           <h2 className="section-title">Experience</h2>
           <p className="section-subtitle mx-auto">
-            Resume-backed experience across AI systems, data pipelines, and scalable engineering
+            Hands-on experience across AI systems, data pipelines, and scalable engineering
           </p>
         </motion.div>
 
@@ -108,15 +109,71 @@ const measure = () => {
                   whileHover={{ scale: 1.05 }}
                 >
                   <Briefcase className="w-5 h-5 text-primary" />
+                  <span className="font-semibold text-primary">AI Automation Intern</span>
+                </motion.div>
+                <span className="text-muted-foreground">•</span>
+                <span className="text-foreground font-medium">National Appraisal Partners</span>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-3 mb-6">
+                <div className="flex items-center gap-2 text-sm text-muted-foreground glass-card w-fit px-3 py-1.5 rounded-full">
+                  <Calendar className="w-4 h-4" />
+                  <span>June 2026 – Present</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground glass-card w-fit px-3 py-1.5 rounded-full">
+                  <MapPin className="w-4 h-4" />
+                  <span>Texas, USA (Remote)</span>
+                </div>
+              </div>
+
+              <ul className="space-y-3">
+                {nationalAppraisalResponsibilities.map((item, index) => (
+                  <motion.li
+                    key={index}
+                    className="flex gap-3 group"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={isInView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ delay: 0.5 + index * 0.1 }}
+                  >
+                    <motion.div
+                      whileHover={{ scale: 1.2, rotate: 10 }}
+                      className="flex-shrink-0 mt-0.5"
+                    >
+                      <CheckCircle className="w-5 h-5 text-primary" />
+                    </motion.div>
+                    <span className="text-muted-foreground group-hover:text-foreground transition-colors">
+                      {item}
+                    </span>
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
+
+            <motion.div
+              className="glass-card rounded-xl p-6 md:p-8 hover-lift mb-12"
+              whileHover={{ x: 8 }}
+            >
+              <div className="flex flex-wrap items-center gap-4 mb-4">
+                <motion.div
+                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <Briefcase className="w-5 h-5 text-primary" />
                   <span className="font-semibold text-primary">AI / ML Intern</span>
                 </motion.div>
                 <span className="text-muted-foreground">•</span>
                 <span className="text-foreground font-medium">EternIQ</span>
               </div>
 
-              <div className="flex items-center gap-2 text-sm text-muted-foreground mb-6 glass-card w-fit px-3 py-1.5 rounded-full">
-                <Calendar className="w-4 h-4" />
-                <span>January 2025 – May 2025</span>
+              <div className="flex flex-wrap items-center gap-3 mb-6">
+                <div className="flex items-center gap-2 text-sm text-muted-foreground glass-card w-fit px-3 py-1.5 rounded-full">
+                  <Calendar className="w-4 h-4" />
+                  <span>January 2025 – May 2025</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground glass-card w-fit px-3 py-1.5 rounded-full">
+                  <MapPin className="w-4 h-4" />
+                  <span>Mumbai, India</span>
+                </div>
               </div>
 
               <ul className="space-y-3">
@@ -153,15 +210,21 @@ const measure = () => {
                   whileHover={{ scale: 1.05 }}
                 >
                   <Briefcase className="w-5 h-5 text-primary" />
-                  <span className="font-semibold text-primary">Full Stack Web Developer Intern</span>
+                  <span className="font-semibold text-primary">Software Developer Intern</span>
                 </motion.div>
                 <span className="text-muted-foreground">•</span>
                 <span className="text-foreground font-medium">Mukesoft IT Consultants</span>
               </div>
 
-              <div className="flex items-center gap-2 text-sm text-muted-foreground mb-6 glass-card w-fit px-3 py-1.5 rounded-full">
-                <Calendar className="w-4 h-4" />
-                <span>July 2023 – February 2024</span>
+              <div className="flex flex-wrap items-center gap-3 mb-6">
+                <div className="flex items-center gap-2 text-sm text-muted-foreground glass-card w-fit px-3 py-1.5 rounded-full">
+                  <Calendar className="w-4 h-4" />
+                  <span>July 2023 – February 2024</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground glass-card w-fit px-3 py-1.5 rounded-full">
+                  <MapPin className="w-4 h-4" />
+                  <span>Mumbai, India</span>
+                </div>
               </div>
 
               <ul className="space-y-3">

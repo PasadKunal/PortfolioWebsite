@@ -4,32 +4,32 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 const skillCategories = [
   {
     title: 'Programming Languages',
-    skills: ['Python', 'SQL', 'Java', 'JavaScript', 'C++', 'R', 'PHP'],
+    skills: ['Python', 'Java', 'TypeScript', 'JavaScript', 'SQL', 'C++', 'R'],
     gradient: 'from-violet-500/20 to-purple-500/20',
   },
   {
-    title: 'Backend & APIs',
-    skills: ['FastAPI', 'Node.js', 'Laravel', 'CodeIgniter', 'REST APIs', 'Microservices'],
-    gradient: 'from-blue-500/20 to-cyan-500/20',
-  },
-  {
-    title: 'Machine Learning & AI',
-    skills: ['PyTorch', 'scikit-learn', 'XGBoost', 'CNNs', 'HuggingFace', 'QLoRA'],
-    gradient: 'from-green-500/20 to-emerald-500/20',
-  },
-  {
-    title: 'LLMs & AI APIs',
-    skills: ['LLMs', 'RAG', 'Prompt Engineering', 'Embeddings', 'Vector Search', 'LLM Evaluation'],
+    title: 'LLMs & Agents',
+    skills: ['LangGraph', 'LangChain', 'RAG', 'Multi-Agent Orchestration', 'Prompt Engineering', 'Fine-Tuning (QLoRA)', 'LLM Evaluation'],
     gradient: 'from-pink-500/20 to-rose-500/20',
   },
   {
-    title: 'Data Systems',
-    skills: ['PostgreSQL', 'MySQL', 'MongoDB', 'FAISS', 'Apache Kafka', 'PySpark'],
+    title: 'Machine Learning',
+    skills: ['PyTorch', 'scikit-learn', 'XGBoost', 'CatBoost', 'HuggingFace', 'MLflow', 'Feature Engineering'],
+    gradient: 'from-green-500/20 to-emerald-500/20',
+  },
+  {
+    title: 'Backend & APIs',
+    skills: ['FastAPI', 'Spring Boot', 'Node.js', 'REST APIs', 'GraphQL', 'Celery', 'Microservices'],
+    gradient: 'from-blue-500/20 to-cyan-500/20',
+  },
+  {
+    title: 'Data & Streaming',
+    skills: ['PostgreSQL', 'Redis', 'MongoDB', 'pgvector', 'Apache Kafka', 'Apache Flink', 'Delta Lake', 'Airflow'],
     gradient: 'from-orange-500/20 to-amber-500/20',
   },
   {
-    title: 'Analytics & Deployment',
-    skills: ['Pandas', 'NumPy', 'Tableau', 'Docker', 'Kubernetes', 'AWS'],
+    title: 'Cloud, DevOps & Analytics',
+    skills: ['Docker', 'Kubernetes', 'AWS', 'GitHub Actions', 'OpenTelemetry', 'Pandas', 'Tableau'],
     gradient: 'from-teal-500/20 to-cyan-500/20',
   },
 ];
@@ -54,7 +54,7 @@ const Skills = () => {
             Skills & <span className="text-gradient">Expertise</span>
           </h2>
           <p className="section-subtitle mx-auto">
-            Tools and concepts that appear across my current resumes
+            Tools and technologies I work with across AI, data, and backend engineering
           </p>
         </motion.div>
 

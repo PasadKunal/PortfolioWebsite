@@ -98,9 +98,9 @@ const About = () => {
             </h2>
             <p className="text-muted-foreground mb-8 leading-relaxed">
               I am a Computer Science graduate student at Rutgers University focused on machine learning,
-              LLM applications, data engineering, and scalable systems. My resumes consistently center
-              on building reliable systems, from inference and evaluation pipelines to analytics workflows
-              and production APIs.
+              LLM applications, data engineering, and scalable systems. I enjoy building reliable systems
+              end to end, from multi-agent LLM pipelines and evaluation frameworks to streaming data
+              platforms and production APIs.
             </p>
 
             {/* Stats */}
@@ -108,7 +108,7 @@ const About = () => {
               {[
                 { value: '100K', label: 'Records Processed' },
                 { value: '33K', label: 'Multilingual Benchmark Questions' },
-                { value: '2', label: 'Internships Completed' },
+                { value: '3', label: 'Internships' },
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}

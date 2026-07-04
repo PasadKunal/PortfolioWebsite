@@ -1,24 +1,24 @@
-import { Globe, Brain, BarChart3, Sparkles } from 'lucide-react';
+import { Server, Brain, BarChart3, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const services = [
   {
     icon: Brain,
-    title: 'LLM Applications & Evaluation',
-    description: 'Building retrieval-augmented and inference workflows with prompt engineering, evaluation frameworks, and latency-focused optimization.',
+    title: 'LLM & Multi-Agent Systems',
+    description: 'Building RAG and multi-agent LLM applications with orchestration, prompt engineering, fine-tuning, and evaluation frameworks focused on reliability and low latency.',
     gradient: 'from-blue-500 to-cyan-500',
   },
   {
-    icon: Globe,
+    icon: Server,
     title: 'Backend & Platform Engineering',
-    description: 'Designing FastAPI and Laravel services, data ingestion layers, and deployment-ready scalable systems for production applications.',
+    description: 'Designing FastAPI and Spring Boot services, REST and event-driven APIs, and distributed, deployment-ready systems with caching, observability, and fault tolerance.',
     gradient: 'from-purple-500 to-pink-500',
   },
   {
     icon: BarChart3,
-    title: 'Data Pipelines & Analytics',
-    description: 'Building ETL, validation, forecasting, and analytics workflows that turn large datasets into reliable model inputs and decision-ready insights.',
+    title: 'Data & Streaming Pipelines',
+    description: 'Building batch and streaming pipelines with Kafka, Flink, and lakehouse workflows, plus validation, feature stores, and analytics that turn raw data into decision-ready inputs.',
     gradient: 'from-green-500 to-emerald-500',
   },
 ];
@@ -45,7 +45,7 @@ const Services = () => {
             <span className="text-gradient">Areas of Interest</span>
           </h2>
           <p className="section-subtitle mx-auto">
-            The technical themes that show up consistently across my resumes and projects
+            The technical themes that show up consistently across my work
           </p>
         </motion.div>
 
