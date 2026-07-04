@@ -79,9 +79,9 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
             >
-              Computer Science graduate student at Rutgers building multi-agent LLM applications, evaluation
-              pipelines, streaming data platforms, and production services across AI, analytics, and scalable
-              engineering.
+              Computer Science graduate student at Rutgers building backend and distributed systems, LLM
+              applications, and data pipelines, with a focus on reliable, scalable software that performs
+              in production.
             </motion.p>
             
             <motion.div 

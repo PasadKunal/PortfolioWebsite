@@ -8,9 +8,14 @@ const skillCategories = [
     gradient: 'from-violet-500/20 to-purple-500/20',
   },
   {
-    title: 'LLMs & Agents',
-    skills: ['LangGraph', 'LangChain', 'RAG', 'Multi-Agent Orchestration', 'Prompt Engineering', 'Fine-Tuning (QLoRA)', 'LLM Evaluation'],
-    gradient: 'from-pink-500/20 to-rose-500/20',
+    title: 'Backend & APIs',
+    skills: ['FastAPI', 'Spring Boot', 'Node.js', 'REST APIs', 'GraphQL', 'Microservices', 'System Design'],
+    gradient: 'from-blue-500/20 to-cyan-500/20',
+  },
+  {
+    title: 'Data & Streaming',
+    skills: ['PostgreSQL', 'Redis', 'MongoDB', 'pgvector', 'Apache Kafka', 'Apache Flink', 'Delta Lake', 'Airflow'],
+    gradient: 'from-orange-500/20 to-amber-500/20',
   },
   {
     title: 'Machine Learning',
@@ -18,14 +23,9 @@ const skillCategories = [
     gradient: 'from-green-500/20 to-emerald-500/20',
   },
   {
-    title: 'Backend & APIs',
-    skills: ['FastAPI', 'Spring Boot', 'Node.js', 'REST APIs', 'GraphQL', 'Celery', 'Microservices'],
-    gradient: 'from-blue-500/20 to-cyan-500/20',
-  },
-  {
-    title: 'Data & Streaming',
-    skills: ['PostgreSQL', 'Redis', 'MongoDB', 'pgvector', 'Apache Kafka', 'Apache Flink', 'Delta Lake', 'Airflow'],
-    gradient: 'from-orange-500/20 to-amber-500/20',
+    title: 'LLMs & Agents',
+    skills: ['LangGraph', 'LangChain', 'RAG', 'Multi-Agent Orchestration', 'Prompt Engineering', 'Fine-Tuning (QLoRA)', 'LLM Evaluation'],
+    gradient: 'from-pink-500/20 to-rose-500/20',
   },
   {
     title: 'Cloud, DevOps & Analytics',
